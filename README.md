@@ -182,7 +182,7 @@ As you can see in the above, you can set `Config` options through kwargs to the 
 Copyright and License
 ---------------------
 
-pychecked was written by Adam Talsma <adam@demonware.net>.
+pychecked was written by Adam Talsma <adam@talsma.ca>.
 
 Copyright (c) 2015, Activision Publishing, Inc.
 All rights reserved.
