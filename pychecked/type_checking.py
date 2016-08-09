@@ -198,7 +198,7 @@ def _do_validation(type_, value):
     if isinstance(type_, type):
         # check for boolean first b/c isinstance(False, int) == True
         is_bool = isinstance(value, bool)
-        if (is_bool and value is type_) or \
+        if (is_bool and type_ is bool) or \
            (not is_bool and isinstance(value, type_)):
             return value
         elif not Config.get("coerce"):
