@@ -59,6 +59,20 @@ def reset_config():
     Config.config().update({"coerce": True, "debug": True, "active": True})
 
 
+def test_strict_bool():
+    @type_checked(coerce=False)
+    def _run_test(x:bool):
+        return x
+    _run_test(True)
+    _run_test(False)
+    _run_test(1 == 1)
+    _run_test(1 == 2)
+
+    with pytest.raises(TypeError):
+        _run_test(1)
+    with pytest.raises(TypeError):
+        _run_test(0)
+
 def test_nested():
     """If there is a len mismatch, the first type is used for all values."""
 
